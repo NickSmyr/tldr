@@ -33,4 +33,9 @@
 
 - Transfer file over SSH and show global progress:
 
-`rsync -e ssh --info=progress2 {{remote_host}}:{{path/to/remote_file}} {{path/to/local_file}}`
+`rsync -e ssh --delete {{remote_host}}:{{path/to/remote_file}} {{path/to/local_file}}`
+
+- Transfer file from local to remote host using a different port:
+
+`rsync -e 'ssh -p {{port}}' {{path/to/local_file}} {{remote_host}}:{{path/to/remote_directory}}`
+
